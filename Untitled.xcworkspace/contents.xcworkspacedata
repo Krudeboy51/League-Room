@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "container:"
+      name = "DatabaseFiles">
+      <FileRef
+         location = "group:Ally+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Ally+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Info+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Info+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Stats+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Stats+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Skins+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Skins+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Spells+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Spells+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Blocks+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Blocks+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Items+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Items+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Tags+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Tags+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Champion+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Champion+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Passive+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Passive+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Imagedata+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Imagedata+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Enemy+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Enemy+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Recommended+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Recommended+CoreDataProperties.swift">
+      </FileRef>
+      <FileRef
+         location = "group:DatabaseVersions+CoreDataClass.swift">
+      </FileRef>
+      <FileRef
+         location = "group:DatabaseVersions+CoreDataProperties.swift">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "container:League Room.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Alamofire/Alamofire.xcodeproj">
+   </FileRef>
+</Workspace>

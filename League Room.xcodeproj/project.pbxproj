@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		813850F51E08BC8A00EC4273 /* ChampionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813850F41E08BC8A00EC4273 /* ChampionListViewController.swift */; };
+		813850F71E08C00D00EC4273 /* ChampionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813850F61E08C00D00EC4273 /* ChampionCollectionViewCell.swift */; };
 		81CBA1081E04A04A00E313A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CBA1071E04A04A00E313A6 /* AppDelegate.swift */; };
-		81CBA10A1E04A04A00E313A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CBA1091E04A04A00E313A6 /* ViewController.swift */; };
+		81CBA10A1E04A04A00E313A6 /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CBA1091E04A04A00E313A6 /* LoadingScreenViewController.swift */; };
 		81CBA10D1E04A04A00E313A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81CBA10B1E04A04A00E313A6 /* Main.storyboard */; };
 		81CBA1101E04A04A00E313A6 /* League_Room.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81CBA10E1E04A04A00E313A6 /* League_Room.xcdatamodeld */; };
 		81CBA1121E04A04A00E313A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81CBA1111E04A04A00E313A6 /* Assets.xcassets */; };
 		81CBA1151E04A04A00E313A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81CBA1131E04A04A00E313A6 /* LaunchScreen.storyboard */; };
 		81CBA1201E04A04B00E313A6 /* League_RoomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CBA11F1E04A04B00E313A6 /* League_RoomTests.swift */; };
 		81CBA12B1E04A04B00E313A6 /* League_RoomUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CBA12A1E04A04B00E313A6 /* League_RoomUITests.swift */; };
+		81CBA13C1E04A15900E313A6 /* ChampionCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CBA1391E04A15900E313A6 /* ChampionCollection.swift */; };
+		81CBA13D1E04A15900E313A6 /* mChampionConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CBA13A1E04A15900E313A6 /* mChampionConstants.swift */; };
+		81CBA13E1E04A15900E313A6 /* mGlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CBA13B1E04A15900E313A6 /* mGlobalConstants.swift */; };
+		81CBA1511E04B1C500E313A6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81CBA14D1E04B13B00E313A6 /* Alamofire.framework */; };
+		81CBA1521E04B1C500E313A6 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 81CBA14D1E04B13B00E313A6 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		81CBA1551E04B27000E313A6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CBA1541E04B27000E313A6 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +42,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		81CBA1531E04B1C500E313A6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				81CBA1521E04B1C500E313A6 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		813850F41E08BC8A00EC4273 /* ChampionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionListViewController.swift; sourceTree = "<group>"; };
+		813850F61E08C00D00EC4273 /* ChampionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionCollectionViewCell.swift; sourceTree = "<group>"; };
 		81CBA1041E04A04A00E313A6 /* League Room.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "League Room.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CBA1071E04A04A00E313A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		81CBA1091E04A04A00E313A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		81CBA1091E04A04A00E313A6 /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		81CBA10C1E04A04A00E313A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81CBA10F1E04A04A00E313A6 /* League_Room.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = League_Room.xcdatamodel; sourceTree = "<group>"; };
 		81CBA1111E04A04A00E313A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +73,11 @@
 		81CBA1261E04A04B00E313A6 /* League RoomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "League RoomUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CBA12A1E04A04B00E313A6 /* League_RoomUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League_RoomUITests.swift; sourceTree = "<group>"; };
 		81CBA12C1E04A04B00E313A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81CBA1391E04A15900E313A6 /* ChampionCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionCollection.swift; sourceTree = "<group>"; };
+		81CBA13A1E04A15900E313A6 /* mChampionConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mChampionConstants.swift; sourceTree = "<group>"; };
+		81CBA13B1E04A15900E313A6 /* mGlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mGlobalConstants.swift; sourceTree = "<group>"; };
+		81CBA14D1E04B13B00E313A6 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81CBA1541E04B27000E313A6 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81CBA1511E04B1C500E313A6 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +106,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		813850F81E08C01500EC4273 /* UICode */ = {
+			isa = PBXGroup;
+			children = (
+				813850F41E08BC8A00EC4273 /* ChampionListViewController.swift */,
+				813850F61E08C00D00EC4273 /* ChampionCollectionViewCell.swift */,
+			);
+			name = UICode;
+			sourceTree = "<group>";
+		};
 		81CBA0FB1E04A04900E313A6 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +122,7 @@
 				81CBA11E1E04A04B00E313A6 /* League RoomTests */,
 				81CBA1291E04A04B00E313A6 /* League RoomUITests */,
 				81CBA1051E04A04A00E313A6 /* Products */,
+				81CBA14D1E04B13B00E313A6 /* Alamofire.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,8 +139,11 @@
 		81CBA1061E04A04A00E313A6 /* League Room */ = {
 			isa = PBXGroup;
 			children = (
+				81CBA1541E04B27000E313A6 /* SwiftyJSON.swift */,
+				81CBA13B1E04A15900E313A6 /* mGlobalConstants.swift */,
+				81CBA1381E04A12F00E313A6 /* Champion */,
+				81CBA1091E04A04A00E313A6 /* LoadingScreenViewController.swift */,
 				81CBA1071E04A04A00E313A6 /* AppDelegate.swift */,
-				81CBA1091E04A04A00E313A6 /* ViewController.swift */,
 				81CBA10B1E04A04A00E313A6 /* Main.storyboard */,
 				81CBA1111E04A04A00E313A6 /* Assets.xcassets */,
 				81CBA1131E04A04A00E313A6 /* LaunchScreen.storyboard */,
@@ -128,6 +171,16 @@
 			path = "League RoomUITests";
 			sourceTree = "<group>";
 		};
+		81CBA1381E04A12F00E313A6 /* Champion */ = {
+			isa = PBXGroup;
+			children = (
+				81CBA1391E04A15900E313A6 /* ChampionCollection.swift */,
+				81CBA13A1E04A15900E313A6 /* mChampionConstants.swift */,
+				813850F81E08C01500EC4273 /* UICode */,
+			);
+			name = Champion;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +191,7 @@
 				81CBA1001E04A04A00E313A6 /* Sources */,
 				81CBA1011E04A04A00E313A6 /* Frameworks */,
 				81CBA1021E04A04A00E313A6 /* Resources */,
+				81CBA1531E04B1C500E313A6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,9 +319,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81CBA10A1E04A04A00E313A6 /* ViewController.swift in Sources */,
+				81CBA13E1E04A15900E313A6 /* mGlobalConstants.swift in Sources */,
+				81CBA10A1E04A04A00E313A6 /* LoadingScreenViewController.swift in Sources */,
+				813850F51E08BC8A00EC4273 /* ChampionListViewController.swift in Sources */,
 				81CBA1081E04A04A00E313A6 /* AppDelegate.swift in Sources */,
+				813850F71E08C00D00EC4273 /* ChampionCollectionViewCell.swift in Sources */,
+				81CBA13C1E04A15900E313A6 /* ChampionCollection.swift in Sources */,
 				81CBA1101E04A04A00E313A6 /* League_Room.xcdatamodeld in Sources */,
+				81CBA1551E04B27000E313A6 /* SwiftyJSON.swift in Sources */,
+				81CBA13D1E04A15900E313A6 /* mChampionConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,6 +578,7 @@
 				81CBA1311E04A04B00E313A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81CBA1321E04A04B00E313A6 /* Build configuration list for PBXNativeTarget "League RoomTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +587,7 @@
 				81CBA1341E04A04B00E313A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81CBA1351E04A04B00E313A6 /* Build configuration list for PBXNativeTarget "League RoomUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +596,7 @@
 				81CBA1371E04A04B00E313A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

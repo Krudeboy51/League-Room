@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ChampionCollection.(getAllChampionsFromURL(completionHandler : ([[String : String]]) -&gt; ()?) -&gt; ()).(closure #1):ChampionCollection.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(League_Room.Info)info">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

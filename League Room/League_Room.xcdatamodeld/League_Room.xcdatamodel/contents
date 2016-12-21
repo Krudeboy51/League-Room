@@ -1,4 +1,136 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="15G1108" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Ally" representedClassName="Ally" syncable="YES" codeGenerationType="class">
+        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="champion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Champion" inverseName="allytips" inverseEntity="Champion" syncable="YES"/>
+    </entity>
+    <entity name="Blocks" representedClassName="Blocks" syncable="YES" codeGenerationType="class">
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Items" inverseName="block" inverseEntity="Items" syncable="YES"/>
+        <relationship name="recommended" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recommended" inverseName="blocks" inverseEntity="Recommended" syncable="YES"/>
+    </entity>
+    <entity name="Champion" representedClassName="Champion" syncable="YES" codeGenerationType="class">
+        <attribute name="blurb" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lore" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="partype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="allytips" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ally" inverseName="champion" inverseEntity="Ally" syncable="YES"/>
+        <relationship name="enemytips" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Enemy" inverseName="champion" inverseEntity="Enemy" syncable="YES"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Imagedata" inverseName="champion" inverseEntity="Imagedata" syncable="YES"/>
+        <relationship name="info" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Info" inverseName="champion" inverseEntity="Info" syncable="YES"/>
+        <relationship name="passive" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Passive" inverseName="champion" inverseEntity="Passive" syncable="YES"/>
+        <relationship name="recommended" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Recommended" inverseName="championr" inverseEntity="Recommended" syncable="YES"/>
+        <relationship name="skins" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Skins" inverseName="champion" inverseEntity="Skins" syncable="YES"/>
+        <relationship name="spells" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Spells" inverseName="champion" inverseEntity="Spells" syncable="YES"/>
+        <relationship name="stats" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Stats" inverseName="champion" inverseEntity="Stats" syncable="YES"/>
+        <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tags" inverseName="champion" inverseEntity="Tags" syncable="YES"/>
+    </entity>
+    <entity name="DatabaseVersions" representedClassName="DatabaseVersions" syncable="YES" codeGenerationType="class">
+        <attribute name="dbname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dbversion" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Enemy" representedClassName="Enemy" syncable="YES" codeGenerationType="class">
+        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="champion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Champion" inverseName="enemytips" inverseEntity="Champion" syncable="YES"/>
+    </entity>
+    <entity name="Imagedata" representedClassName="Imagedata" syncable="YES" codeGenerationType="class">
+        <attribute name="full" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="group" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="h" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sprite" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="w" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="x" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="champion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Champion" inverseName="image" inverseEntity="Champion" syncable="YES"/>
+        <relationship name="passive" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Passive" inverseName="image" inverseEntity="Passive" syncable="YES"/>
+        <relationship name="spells" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Spells" inverseName="image" inverseEntity="Spells" syncable="YES"/>
+    </entity>
+    <entity name="Info" representedClassName="Info" syncable="YES" codeGenerationType="class">
+        <attribute name="attack" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="defense" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="difficulty" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="magic" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="champion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Champion" inverseName="info" inverseEntity="Champion" syncable="YES"/>
+    </entity>
+    <entity name="Items" representedClassName="Items" syncable="YES" codeGenerationType="class">
+        <attribute name="count" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="block" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Blocks" inverseName="items" inverseEntity="Blocks" syncable="YES"/>
+    </entity>
+    <entity name="Passive" representedClassName="Passive" syncable="YES" codeGenerationType="class">
+        <attribute name="descriptionValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="champion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Champion" inverseName="passive" inverseEntity="Champion" syncable="YES"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Imagedata" inverseName="passive" inverseEntity="Imagedata" syncable="YES"/>
+    </entity>
+    <entity name="Recommended" representedClassName="Recommended" syncable="YES" codeGenerationType="class">
+        <attribute name="champion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="map" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="priority" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="blocks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Blocks" inverseName="recommended" inverseEntity="Blocks" syncable="YES"/>
+        <relationship name="championr" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Champion" inverseName="recommended" inverseEntity="Champion" syncable="YES"/>
+    </entity>
+    <entity name="Skins" representedClassName="Skins" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="num" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="champion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Champion" inverseName="skins" inverseEntity="Champion" syncable="YES"/>
+    </entity>
+    <entity name="Spells" representedClassName="Spells" syncable="YES" codeGenerationType="class">
+        <attribute name="costtype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descriptionValue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="champion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Champion" inverseName="spells" inverseEntity="Champion" syncable="YES"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Imagedata" inverseName="spells" inverseEntity="Imagedata" syncable="YES"/>
+    </entity>
+    <entity name="Stats" representedClassName="Stats" syncable="YES" codeGenerationType="class">
+        <attribute name="armor" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="armorperlevel" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="attackdamage" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="attackdamageperlevel" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="attackrange" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="attackspeedofset" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="attackspeedperlevel" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="crit" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="critperlevel" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hp" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hpperlevel" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hpregen" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hpregenperlevel" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="movespeed" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mp" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mpperlevel" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mpregen" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mpregenperlevel" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="spellblock" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="spellblockperlevel" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="champion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Champion" inverseName="stats" inverseEntity="Champion" syncable="YES"/>
+    </entity>
+    <entity name="Tags" representedClassName="Tags" syncable="YES" codeGenerationType="class">
+        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="champion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Champion" inverseName="tags" inverseEntity="Champion" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DatabaseVersions" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Champion" positionX="-54" positionY="9" width="128" height="300"/>
+        <element name="Imagedata" positionX="-36" positionY="135" width="128" height="195"/>
+        <element name="Skins" positionX="-18" positionY="153" width="128" height="105"/>
+        <element name="Ally" positionX="0" positionY="162" width="128" height="75"/>
+        <element name="Enemy" positionX="18" positionY="171" width="128" height="75"/>
+        <element name="Tags" positionX="36" positionY="180" width="128" height="75"/>
+        <element name="Info" positionX="-9" positionY="126" width="128" height="120"/>
+        <element name="Stats" positionX="0" positionY="135" width="128" height="360"/>
+        <element name="Spells" positionX="9" positionY="153" width="128" height="135"/>
+        <element name="Passive" positionX="18" positionY="162" width="128" height="105"/>
+        <element name="Recommended" positionX="27" positionY="171" width="128" height="165"/>
+        <element name="Blocks" positionX="36" positionY="180" width="128" height="90"/>
+        <element name="Items" positionX="45" positionY="189" width="128" height="90"/>
+    </elements>
 </model>
